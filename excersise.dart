@@ -1,30 +1,19 @@
 import 'dart:math';
+/*Write a program (function) that takes a
+ list and returns a new list that contains all the elements of 
+the first list minus all the duplicates.*/
 
-//Random function in dart
 void main() {
-  var random = Random();
+  //create  a list with duplicate elements;
+  List<int> numbers = [1, 2, 3, 2, 1, 3, 6, 7, 8, 4, 3, 2, 9, 0, 1, 2, 4];
+  print('Main list ${numbers}');
+  //call remove function in print statement and pass the numbers,
+  // list in argument for remove function;
+  print(remove(numbers));
+}
 
-  for (;;) {
-    var rnd = random.nextInt(5) + 1;
-    print('The dice is moving');
-    if (rnd == 1) {
-      print('you got $rnd');
-      print('you are first stage');
-    } else if (rnd == 2) {
-      print('you got $rnd');
-      print('you are second stage');
-    } else if (rnd == 3) {
-      print('you got $rnd');
-      print('third stage');
-    } else if (rnd == 4) {
-      print('you got $rnd');
-      print('superrrrrrrr...........');
-    } else if (rnd == 5) {
-      print('you got $rnd');
-      print('Finished you are the winner');
-    }
-    if (rnd == 5) {
-      break;
-    }
-  }
+//create a function for remove duplicates;
+List<int> remove(List<int> removedNumbers) {
+  // return to remove numbers list convert set and convert list;
+  return removedNumbers.toSet().toList();
 }

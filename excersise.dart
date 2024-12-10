@@ -1,14 +1,14 @@
-import 'dart:io';
-
-//Palindrome or not a String;
+class A {
+  static A _obj = A._b();
+  A._b();
+  factory A() {
+    return _obj;
+  }
+}
 
 void main() {
-  print("enter a string");
-  String name = stdin.readLineSync()!;
-  String reverse = name.split('').reversed.join();
-  if (name == reverse) {
-    print('palindrome');
-  } else {
-    print('not palindrome');
-  }
+  A o = A();
+  A n = A();
+  print(o.hashCode);
+  print(n.hashCode);
 }
